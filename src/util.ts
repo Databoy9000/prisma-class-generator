@@ -7,7 +7,7 @@ import { DMMF } from '@prisma/generator-helper'
 import { Options, format } from 'prettier'
 
 export const capitalizeFirst = (src: string) => {
-	if (src === 'bigint') return 'BitInt'
+	if (src === 'bigint') return 'BigInt'
 	return src.charAt(0).toUpperCase() + src.slice(1)
 }
 
