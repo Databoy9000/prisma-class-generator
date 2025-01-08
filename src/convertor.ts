@@ -163,7 +163,7 @@ export class PrismaConvertor {
 		}
 
 		let type = this.getPrimitiveMapTypeFromDMMF(dmmfField)
-		if (type && type !== 'JsonValue') {
+		if (type && type === 'JsonValue') {
 			options.type = 'Object'
 			decorator.params.push(options)
 			return decorator
