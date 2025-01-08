@@ -1,19 +1,22 @@
 {
-	"name": "prisma-class-generator",
-	"version": "0.2.11",
+	"name": "@Databoy9000/prisma-class-generator",
+	"version": "0.2.12",
 	"description": "Class generator from Prisma schema",
 	"main": "dist/index.js",
 	"license": "MIT",
+	"publishConfig": {
+		"registry": "https://npm.pkg.github.com"
+	},
 	"keywords": [
 		"prisma",
 		"nestjs",
 		"typescript",
 		"generator"
 	],
-	"homepage": "https://github.com/kimjbstar/prisma-class-generator",
+	"homepage": "https://github.com/@Databoy9000/prisma-class-generator",
 	"repository": {
 		"type": "git",
-		"url": "git://github.com/kimjbstar/prisma-class-generator.git"
+		"url": "git://github.com/@Databoy9000/prisma-class-generator.git"
 	},
 	"scripts": {
 		"format": "prettier --write \"src/**/*.ts\"",
