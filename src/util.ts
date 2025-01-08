@@ -7,6 +7,7 @@ import { DMMF } from '@prisma/generator-helper'
 import { Options, format } from 'prettier'
 
 export const capitalizeFirst = (src: string) => {
+	if (src === 'bigint') return 'BitInt'
 	return src.charAt(0).toUpperCase() + src.slice(1)
 }
 
@@ -20,7 +21,7 @@ export const getRelativeTSPath = (from: string, to: string): string => {
 	return rel
 }
 
-export const uniquify = <T>(src: T[]): T[] => {
+export const uniquify = <T,>(src: T[]): T[] => {
 	return [...new Set(src)]
 }
 
@@ -65,7 +66,7 @@ export const parseNumber = (value: unknown): number => {
 	return numbered
 }
 
-export const toArray = <T>(value: T | T[]): T[] => {
+export const toArray = <T,>(value: T | T[]): T[] => {
 	return Array.isArray(value) ? value : [value]
 }
 

@@ -29,7 +29,7 @@ const primitiveMapType: Record<DefaultPrismaFieldType, string> = {
 	DateTime: 'Date',
 	Boolean: 'boolean',
 	Json: 'object',
-	BigInt: 'BigInt',
+	BigInt: 'bigint',
 	Float: 'number',
 	Decimal: 'number',
 	Bytes: 'Buffer',
@@ -37,7 +37,7 @@ const primitiveMapType: Record<DefaultPrismaFieldType, string> = {
 
 export type PrimitiveMapTypeKeys = keyof typeof primitiveMapType
 export type PrimitiveMapTypeValues =
-	typeof primitiveMapType[PrimitiveMapTypeKeys]
+	(typeof primitiveMapType)[PrimitiveMapTypeKeys]
 
 export interface SwaggerDecoratorParams {
 	isArray?: boolean
