@@ -96,6 +96,12 @@ export class FileComponent implements Echoable {
 		})
 
 		this.prismaClass.fields.forEach((field) => {
+			if (field.type == 'JsonValue')
+				this.registerImport(
+					'JsonValue',
+					'@prisma/client/runtime/library',
+				)
+
 			field.decorators.forEach((decorator) => {
 				this.registerImport(decorator.name, decorator.importFrom)
 			})
