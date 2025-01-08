@@ -378,7 +378,13 @@ export class PrismaConvertor {
 					field.default = `'${field.default}'`
 				}
 			} else if (Array.isArray(dmmfField.default)) {
-				if (dmmfField.type === 'String') {
+				const enumFieldType = this.dmmf.schema.enumTypes.model.find(
+					(f) => f.name == dmmfField.type,
+				)
+
+				if (enumFieldType) {
+					field.default = `[${enumFieldType.name}.${dmmfField.default[0]}]`
+				} else if (dmmfField.type === 'String') {
 					field.default = `[${dmmfField.default
 						.map((d) => `'${d}'`)
 						.toString()}]`
