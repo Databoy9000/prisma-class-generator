@@ -36,7 +36,7 @@ export class FieldComponent extends BaseComponent implements Echoable {
 		}
 
 		if (
-			!this.nullable &&
+			(!this.nullable || this.preserveDefaultNullable) &&
 			defaultValue === '' &&
 			this.nonNullableAssertion === true
 		) {
