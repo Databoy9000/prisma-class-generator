@@ -20,8 +20,6 @@ export class FieldComponent extends BaseComponent implements Echoable {
 			} else {
 				name += '?'
 			}
-		} else if (this.nonNullableAssertion === true) {
-			name += '!'
 		}
 
 		let defaultValue = ''
@@ -35,6 +33,14 @@ export class FieldComponent extends BaseComponent implements Echoable {
 			if (this.useUndefinedDefault === true) {
 				defaultValue = `= undefined`
 			}
+		}
+
+		if (
+			!this.nullable &&
+			defaultValue === '' &&
+			this.nonNullableAssertion === true
+		) {
+			name += '!'
 		}
 
 		return FIELD_TEMPLATE.replace('#!{NAME}', name)

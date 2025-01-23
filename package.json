@@ -1,12 +1,9 @@
 {
-	"name": "@Databoy9000/prisma-class-generator",
-	"version": "0.2.14",
+	"name": "@spotable/prisma-class-generator",
+	"version": "0.2.15",
 	"description": "Class generator from Prisma schema",
 	"main": "dist/index.js",
 	"license": "MIT",
-	"publishConfig": {
-		"registry": "https://npm.pkg.github.com"
-	},
 	"keywords": [
 		"prisma",
 		"nestjs",
