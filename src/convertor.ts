@@ -31,7 +31,7 @@ const primitiveMapType: Record<DefaultPrismaFieldType, string> = {
 	Json: 'JsonValue',
 	BigInt: 'bigint',
 	Float: 'number',
-	Decimal: 'number',
+	Decimal: 'Prisma.Decimal',
 	Bytes: 'Buffer',
 } as const
 
