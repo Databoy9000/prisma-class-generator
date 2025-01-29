@@ -163,6 +163,11 @@ export class PrismaConvertor {
 		}
 
 		let type = this.getPrimitiveMapTypeFromDMMF(dmmfField)
+		if (type && type == 'Prisma.Decimal') {
+			options.type = 'Number'
+			decorator.params.push(options)
+			return decorator
+		}
 		if (type && type === 'JsonValue') {
 			options.type = 'Object'
 			decorator.params.push(options)
