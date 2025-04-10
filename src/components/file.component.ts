@@ -97,7 +97,7 @@ export class FileComponent implements Echoable {
 
 		this.prismaClass.fields.forEach((field) => {
 			if (field.type == 'Prisma.Decimal')
-				this.registerImport('Prisma', '@prisma/client')
+				this.registerImport('Prisma', generator.getClientImportPath())
 
 			if (field.type == 'JsonValue')
 				this.registerImport(
