@@ -1,6 +1,6 @@
 {
 	"name": "@spotable/prisma-class-generator",
-	"version": "0.2.19",
+	"version": "0.2.20",
 	"description": "Class generator from Prisma schema",
 	"main": "dist/index.js",
 	"license": "MIT",
